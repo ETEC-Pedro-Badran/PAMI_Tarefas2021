@@ -1,0 +1,49 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+  background-color:#E4E4E4;
+  background-image: linear-gradient(to bottom, #254175 0%, #3a7fe6 51%);
+  font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+  font-size:12px;
+  height:100vh;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  /* Padding to avoid the "unsafe" areas behind notches in the screen */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+}
+
+
+
+
+/* botão flutuante vermelho com um + no meio */
+.btn-floating{
+  position: fixed; /* Posição fixa na tela fixed permite informar a distancia do elementen em relação as bordas da pagina. */
+  bottom: 3px; /* Borda inferior, distancia */
+  right: 3px;/*borda direita 3 pixels de distância.*/
+}
+/*Lista que vai organizar as tarefas uma embaixo da outra*/
+#lista-tarefas {
+  border: none; /* retira bordas da lista */
+  padding: 10px; /* espaçamento interno de 10 pixels /**/
+  height: 100vh; /* altura fixa de 100% da altura da tela */
+  font-family: Roboto; /* definida a fonte Roboto */
+  
+}
+/*Cada tarefa que será listada na lista-tarefas*/
+.collection-item {
+  border: 1px solid moccasin !important; /* borda com cor solida de 1 pixel de largura. IMPORTANTE: !important força o navegador a utilizar essa regra. Mesmo que já existam outras regras css que definam a mesma propriedade em outra regra carregada anteriormente.*/
+  border-radius: 0px 25px 25px 25px; /* define o arredondamento da borda. Os valores definem as bordas Superior-esquerda, superior-direita, inferior-direita, inferior-esquerda. Ou seja, no sentido horário.*/
+
+  margin-bottom: 5px !important;
+}
+.realizada{
+text-decoration: line-through;
+}
+
+
